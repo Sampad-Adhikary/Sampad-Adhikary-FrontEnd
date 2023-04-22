@@ -2,7 +2,7 @@ import React, { useState, useEffect, memo } from "react";
 import PropTypes from "prop-types";
 
 // Single List Item
-const SingleListItem = memo(({ index, isSelected, onClickHandler, text }) => {
+const WrappedSingleListItem = memo(({ index, isSelected, onClickHandler, text }) => {
   return (
     <li
       style={{ backgroundColor: isSelected === index ? "green" : "red" , margin:"10px", padding:"10px", borderRadius:"10px"}}
@@ -13,7 +13,7 @@ const SingleListItem = memo(({ index, isSelected, onClickHandler, text }) => {
   );
 });
 
-SingleListItem.propTypes = {
+WrappedSingleListItem.propTypes = {
   index: PropTypes.number.isRequired,
   isSelected: PropTypes.number.isRequired,
   onClickHandler: PropTypes.func.isRequired,
@@ -21,7 +21,7 @@ SingleListItem.propTypes = {
 };
 
 // List Component
-const List = memo(({ items }) => {
+const WrappedListComponent = memo(({ items }) => {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const List = memo(({ items }) => {
   return (
     <ul style={{ textAlign: "left"}}>
       {items.map((item, index) => (
-        <SingleListItem
+        <WrappedSingleListItem
           key={index}
           onClickHandler={handleClick}
           text={item.text}
@@ -47,7 +47,7 @@ const List = memo(({ items }) => {
   );
 });
 
-List.propTypes = {
+WrappedListComponent.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,
@@ -55,4 +55,4 @@ List.propTypes = {
   ).isRequired,
 };
 
-export default List;
+export default WrappedListComponent;
