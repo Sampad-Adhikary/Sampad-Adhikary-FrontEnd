@@ -1,6 +1,6 @@
 # Answers:
 
-#List Component
+# List Component
 The List component is a React functional component that renders a list of items passed as a prop. Each item is rendered as an <li> element, and the list component tracks the selected index to highlight the selected item. The List component has a SingleListItem child component that renders an individual list item.
 
 2.There are a few issues with the code:
