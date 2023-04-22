@@ -1,6 +1,5 @@
 # Answers:
 
-# List Component
-<ol>
-    <li>The code represents a React functional component that renders a list of items passed as a prop. Each item is rendered as an list item element, and the list component tracks the selected index to highlight the selected item. The List component has a SingleListItem child component that renders an individual list item.</li>
-</ol>
+### For answers of Question 1 and 2 kindly refer to the Wiki section.
+
+### For the answer of Question 3, the code in in List.js file in src folder.
