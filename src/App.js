@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import List from './List';
+
+const items = [
+  { text: 'Demo item 1 -> click to select' },
+  { text: 'Demo item 2 -> click to select' },
+  { text: 'Demo item 3 -> click to select' },
+  { text: 'Demo item 4 -> click to select' },
+  { text: 'Demo item 5 -> click to select' },
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <h1 style={{textAlign:"center"}}>Frontend Engineer assignment </h1>
+      <List items = {items}/>
+    <h5 style={{textAlign:"center"}}>Submitted by <a href='https://sampadadhikary.cyclic.app/' target='blank'>Sampad Adhikary</a>, <a>github</a></h5>
     </div>
   );
 }
